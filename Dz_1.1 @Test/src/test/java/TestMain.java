@@ -1,7 +1,10 @@
+import org.junit.Test;
+
 public abstract class TestMain {
     public abstract IAnimal getName();
 
-      public void testgo() {
+     @Test
+     public void go() {
         IAnimal name = getName();
         String result = name.go();
         if (result == null || result.isEmpty()) {
@@ -9,7 +12,8 @@ public abstract class TestMain {
         }
     }
 
-    public void testGetLegs() {
+    @Test
+    public void getLegs() {
         IAnimal name = getName();
         Integer result = name.getLegs();
         if (result == null) {
@@ -20,7 +24,8 @@ public abstract class TestMain {
         }
     }
 
-    public void testVoice() throws VoiceException {
+    @Test
+    public void voice() throws VoiceException {
         IAnimal name = getName();
         String result = name.voice();
         if (result == null || result.isEmpty()) {

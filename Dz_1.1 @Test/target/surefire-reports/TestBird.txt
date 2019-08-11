@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestBird
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.078 sec <<< FAILURE!
-go(TestBird)  Time elapsed: 0.03 sec  <<< ERROR!
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.32 sec <<< FAILURE!
+go(TestBird)  Time elapsed: 0.006 sec  <<< ERROR!
 java.lang.RuntimeException: Method go is not implement
 	at TestMain.go(TestMain.java:11)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
