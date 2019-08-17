@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: JDBCTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.491 s <<< FAILURE! - in JDBCTest
-ownerHasMoreThanTwoCar  Time elapsed: 0.002 s  <<< FAILURE!
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.391 s <<< FAILURE! - in JDBCTest
+ownerHasMoreThanTwoCar  Time elapsed: 0.04 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: owner is anna has more than two car ==> expected: <true> but was: <false>
 	at JDBCTest.ownerHasMoreThanTwoCar(JDBCTest.java:56)
 
-allOwnerMustBeHaveCar  Time elapsed: 0 s  <<< FAILURE!
+allOwnerMustBeHaveCar  Time elapsed: 0.01 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Car with name BMW don't have a owner ==> expected: <true> but was: <false>
 	at JDBCTest.allOwnerMustBeHaveCar(JDBCTest.java:33)
 
@@ -14,7 +14,7 @@ allCarsMustBeHaveOwner  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Car with name lada is have a owner ==> expected: <true> but was: <false>
 	at JDBCTest.allCarsMustBeHaveOwner(JDBCTest.java:43)
 
-legalAgeOfOwner  Time elapsed: 0 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Owner is 16 years ==> expected: <[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]> but was: <16>
-	at JDBCTest.legalAgeOfOwner(JDBCTest.java:69)
+legalAgeOfOwner  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Owner is 16 years ==> expected: <18> but was: <16>
+	at JDBCTest.legalAgeOfOwner(JDBCTest.java:65)
 

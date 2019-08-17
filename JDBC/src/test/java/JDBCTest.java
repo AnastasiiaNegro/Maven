@@ -56,20 +56,33 @@ public class JDBCTest {
             assertTrue(resultSet.getInt("count (car.name)") < 2, "owner is ".concat(owner_name).concat(" has more than two car"));
         }
     }
-    //assertSame проверка возраста
+
+    //    assertSame проверка возраста
     @Test
     public void legalAgeOfOwner() throws SQLException {
-        int [] years = new int [65];
-        int start = 16;
-        for (int i = 0; i < years.length; i++){
-            years[i]= start++;
-        }
         ResultSet resultSet = statement.executeQuery("SELECT age\n" +
                 "FROM owner;");
-        assertSame(years, resultSet.getInt("age"), "Owner is ".concat(resultSet.getString("age")).concat(" years"));
-
+        assertSame(18, resultSet.getInt("age"), "Owner is ".concat(resultSet.getString("age")).concat(" years"));
     }
-        }
+}
+//          Тест fail при любом возрасте
+//    @Test
+//    public void legalAgeOfOwner() throws SQLException {
+//        int [] years = new int [65];
+//        int start = 16;
+//        for (int i = 0; i < years.length; i++){
+//            years[i]= start++;
+//        }
+//        ResultSet resultSet = statement.executeQuery("SELECT age\n" +
+//                "FROM owner;");
+//        assertSame(years, resultSet.getInt("age"), "Owner is ".concat(resultSet.getString("age")).concat(" years"));
+
+
+
+
+
+
+
 
 
 
