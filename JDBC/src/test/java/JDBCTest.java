@@ -65,7 +65,11 @@ public class JDBCTest {
         assertSame(18, resultSet.getInt("age"), "Owner is ".concat(resultSet.getString("age")).concat(" years"));
     }
 }
-//          Тест fail при любом возрасте
+
+
+
+
+//        assertSame
 //    @Test
 //    public void legalAgeOfOwner() throws SQLException {
 //        int [] years = new int [65];
