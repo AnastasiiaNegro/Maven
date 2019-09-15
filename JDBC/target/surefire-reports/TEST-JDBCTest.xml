@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="JDBCTest" time="0.391" tests="4" errors="0" skipped="0" failures="4">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="JDBCTest" time="1.45" tests="5" errors="0" skipped="0" failures="5">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Temp\surefire2692191283438101800\surefirebooter11538754615673196725.jar C:\Temp\surefire2692191283438101800 2019-08-18T01-22-54_561-jvmRun1 surefire3847730604064175858tmp surefire_05697394628741495404tmp"/>
+    <property name="sun.java.command" value="C:\Temp\surefire16806026358729465313\surefirebooter16295489380613637516.jar C:\Temp\surefire16806026358729465313 2019-09-15T11-55-16_941-jvmRun1 surefire460008322426493227tmp surefire_01201511291452453752tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Админ\IdeaProjects\Java\JDBC\target\test-classes;C:\Users\Админ\IdeaProjects\Java\JDBC\target\classes;C:\Users\Админ\.m2\repository\org\xerial\sqlite-jdbc\3.28.0\sqlite-jdbc-3.28.0.jar;C:\Users\Админ\.m2\repository\org\junit\jupiter\junit-jupiter\5.5.1\junit-jupiter-5.5.1.jar;C:\Users\Админ\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.1\junit-jupiter-api-5.5.1.jar;C:\Users\Админ\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Админ\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Админ\.m2\repository\org\junit\platform\junit-platform-commons\1.5.1\junit-platform-commons-1.5.1.jar;C:\Users\Админ\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.1\junit-jupiter-params-5.5.1.jar;C:\Users\Админ\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.1\junit-jupiter-engine-5.5.1.jar;C:\Users\Админ\.m2\repository\org\junit\platform\junit-platform-engine\1.5.1\junit-platform-engine-1.5.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Temp\surefire2692191283438101800\surefirebooter11538754615673196725.jar"/>
+    <property name="surefire.real.class.path" value="C:\Temp\surefire16806026358729465313\surefirebooter16295489380613637516.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12.0.1+12"/>
@@ -59,12 +59,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="ownerHasMoreThanTwoCar" classname="JDBCTest" time="0.04">
+  <testcase name="ownerHasMoreThanTwoCar" classname="JDBCTest" time="0.046">
     <failure message="owner is anna has more than two car ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: owner is anna has more than two car ==> expected: <true> but was: <false>
 	at JDBCTest.ownerHasMoreThanTwoCar(JDBCTest.java:56)
 ]]></failure>
   </testcase>
-  <testcase name="allOwnerMustBeHaveCar" classname="JDBCTest" time="0.01">
+  <testcase name="updateCar" classname="JDBCTest" time="1.105">
+    <failure message="Expected java.sql.SQLException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Expected java.sql.SQLException to be thrown, but nothing was thrown.
+	at JDBCTest.updateCar(JDBCTest.java:109)
+</failure>
+  </testcase>
+  <testcase name="allOwnerMustBeHaveCar" classname="JDBCTest" time="0.006">
     <failure message="Car with name BMW don&apos;t have a owner ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Car with name BMW don't have a owner ==> expected: <true> but was: <false>
 	at JDBCTest.allOwnerMustBeHaveCar(JDBCTest.java:33)
 ]]></failure>
@@ -74,7 +79,7 @@
 	at JDBCTest.allCarsMustBeHaveOwner(JDBCTest.java:43)
 ]]></failure>
   </testcase>
-  <testcase name="legalAgeOfOwner" classname="JDBCTest" time="0.006">
+  <testcase name="legalAgeOfOwner" classname="JDBCTest" time="0.001">
     <failure message="Owner is 16 years ==&gt; expected: &lt;18&gt; but was: &lt;16&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Owner is 16 years ==> expected: <18> but was: <16>
 	at JDBCTest.legalAgeOfOwner(JDBCTest.java:65)
 ]]></failure>

@@ -1,12 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: JDBCTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.391 s <<< FAILURE! - in JDBCTest
-ownerHasMoreThanTwoCar  Time elapsed: 0.04 s  <<< FAILURE!
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.45 s <<< FAILURE! - in JDBCTest
+ownerHasMoreThanTwoCar  Time elapsed: 0.046 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: owner is anna has more than two car ==> expected: <true> but was: <false>
 	at JDBCTest.ownerHasMoreThanTwoCar(JDBCTest.java:56)
 
-allOwnerMustBeHaveCar  Time elapsed: 0.01 s  <<< FAILURE!
+updateCar  Time elapsed: 1.105 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.sql.SQLException to be thrown, but nothing was thrown.
+	at JDBCTest.updateCar(JDBCTest.java:109)
+
+allOwnerMustBeHaveCar  Time elapsed: 0.006 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Car with name BMW don't have a owner ==> expected: <true> but was: <false>
 	at JDBCTest.allOwnerMustBeHaveCar(JDBCTest.java:33)
 
@@ -14,7 +18,7 @@ allCarsMustBeHaveOwner  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Car with name lada is have a owner ==> expected: <true> but was: <false>
 	at JDBCTest.allCarsMustBeHaveOwner(JDBCTest.java:43)
 
-legalAgeOfOwner  Time elapsed: 0.006 s  <<< FAILURE!
+legalAgeOfOwner  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: Owner is 16 years ==> expected: <18> but was: <16>
 	at JDBCTest.legalAgeOfOwner(JDBCTest.java:65)
 
